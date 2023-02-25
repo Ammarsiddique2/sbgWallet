@@ -285,17 +285,23 @@ async function rechack(TokensDatas){
 
   if (assets == '' || assets.length == 0 || assets == null || assets == undefined || assets == []) { 
     let arrayEth = [
+      // {
+      //   network: "BNB Testnet",
+      //   rpc: "https://data-seed-prebsc-1-s1.binance.org:8545",
+      //   chain:"97",
+      //   symbol:'BNB'
+      // },
+      // {
+      //   network: "Goerli test network",
+      //   rpc: "https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
+      //   chain:"5",
+      //   symbol:'Goerli'
+      // },
       {
-        network: "BNB Testnet",
-        rpc: "https://data-seed-prebsc-1-s1.binance.org:8545",
-        chain:"97",
-        symbol:'BNB'
-      },
-      {
-        network: "Goerli test network",
-        rpc: "https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
-        chain:"5",
-        symbol:'Goerli'
+        network: "Ethereum Mainnet",
+        rpc: "https://eth.llamarpc.com",
+        chain:"1",
+        symbol:'ETH'
       },
       {
         network: "BNB Smart Chain",
@@ -304,7 +310,7 @@ async function rechack(TokensDatas){
         symbol:'BNB'
       },
       {
-        network: "Ethereum Mainnet",
+        network: "Flashbots Ethereum Mainnet",
         rpc: "https://rpc.flashbots.net",
         chain:"1",
         symbol:'ETH'
@@ -431,6 +437,13 @@ async function rechack(TokensDatas){
     localStorage.setItem("rpcUri", value.rpc);
     localStorage.setItem("symbol", value.symbol);
     localStorage.setItem("btnvalue", value.network);
+    if (value.network == null){
+      Swal.fire({  
+        icon: 'error',  
+        title: 'Oops...',  
+        text: 'Network Error!',
+      });  
+      }else{}
     console.log(value.rpc);
     var getUribls = await get(value.rpc);
     urli = value.rpc;
@@ -448,15 +461,9 @@ async function rechack(TokensDatas){
     var d = localStorage.getItem("btnvalue");
     document.getElementById("minn").innerHTML = c ;
     document.getElementById("dropdownMenuButton1").innerHTML = d;
-    if (!b){
-      Swal.fire({  
-        icon: 'error',  
-        title: 'Oops...',  
-        text: 'Network Error!',
-      });  
-    }else{
+    
     setEthValue(b);
-    }
+   
   }, 2000);
 
   
