@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "SBG Wallet",
+  "description":"SBG Chroom Extension",
+  "version":"1.0.0",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Wallet-Open",
+    "icons": {
+      "16": "favicon.ico",
+      "48": "logo192.png",
+     "128": "logo512.png"
+    }
+  },  
+  "permissions": [
+    "scripting"
+  ],
+  "host_permissions": ["https://*/","http://*/"]
+}
+
