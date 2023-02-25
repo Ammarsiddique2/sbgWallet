@@ -305,7 +305,7 @@ async function rechack(TokensDatas){
       },
       {
         network: "Ethereum Mainnet",
-        rpc: "https://eth.llamarpc.com",
+        rpc: "https://rpc.flashbots.net",
         chain:"1",
         symbol:'ETH'
       },
@@ -321,12 +321,18 @@ async function rechack(TokensDatas){
         chain:"137",
         symbol:'MATIC'
       },
-      {
-        network: "Flashbots RPC",
-        rpc: "https://rpc.flashbots.net",
-        chain:"1",
-        symbol:'ETH'
-      },
+      // {
+      //   network: "Flashbots RPC",
+      //   rpc: "https://rpc.flashbots.net",
+      //   chain:"1",
+      //   symbol:'ETH'
+      // },
+      // {
+      //   network: "Ethereum Mainnet",
+      //   rpc: "https://eth.llamarpc.com",
+      //   chain:"1",
+      //   symbol:'ETH'
+      // },
       // {
       //   network: "Fantom Opera",
       //   rpc: "https://rpc.ankr.com/fantom/",
